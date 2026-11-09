@@ -1,0 +1,1 @@
+from pytest_predicate.fixtures import predicate_examples

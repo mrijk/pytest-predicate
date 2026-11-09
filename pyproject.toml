@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-predicate"
+version = "0.1.0"
+authors = [{name = "Maurits Rijk", email = "maurits.rijk@gmail.com"}]
+description = "Pytest integration for py-predicate"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+dependencies = [
+    "py-predicate",
+    "pytest>=8",
+]
+classifiers = [
+    "Framework :: Pytest",
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+]
+
+[project.entry-points.pytest11]
+predicate = "pytest_predicate.plugin"
+
+[tool.setuptools.packages.find]
+where = ["src"]
