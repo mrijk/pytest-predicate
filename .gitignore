@@ -1,0 +1,25 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+.venv/
+.idea/
+
+mutants/
+uv.lock
+.claude/
+CLAUDE.md
+
+dist/
+*.egg-info/
+
+
+# Sphinx documentation
+docs/_build/
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+.mutmut-cache
