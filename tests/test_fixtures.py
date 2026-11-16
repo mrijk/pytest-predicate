@@ -1,3 +1,4 @@
+import pytest
 from predicate import ge_p, le_p
 
 
@@ -9,3 +10,10 @@ def test_integer_predicate(predicate_examples):
 
     assert all(predicate(x) for x in matching)
     assert all(not predicate(x) for x in non_matching)
+
+
+def test_negative_count(predicate_examples):
+    with pytest.raises(ValueError):
+        predicate_examples.matching(ge_p(10), count=-1)
+    with pytest.raises(ValueError):
+        predicate_examples.non_matching(ge_p(10), count=-1)
