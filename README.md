@@ -23,6 +23,7 @@ Use `assert_matches` to assert that a value satisfies a predicate:
 from predicate import ge_p
 from pytest_predicate import assert_matches
 
+
 def test_minimum_value():
     assert_matches(10, ge_p(5))
 ```
@@ -35,6 +36,7 @@ Use `assert_not_matches` to assert that a value does not satisfy a predicate:
 from predicate import ge_p
 from pytest_predicate import assert_not_matches
 
+
 def test_value_below_minimum():
     assert_not_matches(3, ge_p(5))
 ```
@@ -46,6 +48,7 @@ The `predicate_examples` fixture provides matching and non-matching values gener
 ```python
 from predicate import ge_p, le_p
 from pytest_predicate import assert_matches, assert_not_matches
+
 
 def test_integer_range(predicate_examples):
     predicate = ge_p(10) & le_p(20)
@@ -86,7 +89,7 @@ Clone the repository and install it in editable mode:
 git clone https://github.com/mrijk/pytest-predicate.git
 cd pytest-predicate
 
-pip install -e ".[dev]"
+pip install -e .
 ```
 
 Run the test suite:

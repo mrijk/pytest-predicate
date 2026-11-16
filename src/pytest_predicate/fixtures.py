@@ -1,7 +1,5 @@
-from collections.abc import Callable
 from dataclasses import dataclass
 from itertools import islice
-from typing import Any
 
 import pytest
 from predicate import generate_false, generate_true

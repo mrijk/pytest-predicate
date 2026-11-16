@@ -1,1 +1,1 @@
-from pytest_predicate.fixtures import predicate_examples
+from pytest_predicate.fixtures import predicate_examples  # noqa: F401

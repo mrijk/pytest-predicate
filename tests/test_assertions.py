@@ -1,6 +1,6 @@
 import pytest
-
 from predicate import ge_p
+
 from pytest_predicate import assert_matches, assert_not_matches
 
 
@@ -9,7 +9,7 @@ def test_assert_matches():
 
 
 def test_assert_matches_failure():
-    with pytest.raises(AssertionError):
+    with pytest.raises(AssertionError, match="does not match"):
         assert_matches(3, ge_p(5))
 
 
